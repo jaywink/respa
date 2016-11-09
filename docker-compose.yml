@@ -4,10 +4,8 @@ services:
     image: mdillon/postgis:9.5
   web:
     build: .
-    working_dir: /respa
+    working_dir: /code
     command: python manage.py runserver 0:8000
-    volumes:
-      - .:/respa
     ports:
       - "8000:8000"
     depends_on:
