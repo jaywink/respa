@@ -116,7 +116,7 @@ class Period(models.Model):
     duration = pgfields.DateRangeField(verbose_name=_('Length of period'), null=True,
                                        blank=True, db_index=True)
 
-    name = models.CharField(max_length=200, verbose_name=_('Name'))
+    name = models.CharField(max_length=200, verbose_name=_('Name'), blank=True, default='')
     description = models.CharField(verbose_name=_('Description'), null=True,
                                    blank=True, max_length=500)
     closed = models.BooleanField(verbose_name=_('Closed'), default=False, editable=False)
